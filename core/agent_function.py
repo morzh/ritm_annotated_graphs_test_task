@@ -27,7 +27,7 @@ class AgentFunction:
         """
         Process ``graph_element`` according to ``agent_function`` rules.
         Args:
-            graph:
+            graph: annotated graph
             graph_element: graph vertex or edge
         """
         if graph_element.attribute is None:
