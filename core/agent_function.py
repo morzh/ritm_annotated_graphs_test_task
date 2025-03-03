@@ -31,9 +31,9 @@ class AgentFunction:
             graph_element: graph vertex or edge
         """
         if graph_element.attribute is None:
-            if graph_element.__class__.__name__ == AnnotatedGraphVertex.__name__:
+            if isinstance(graph_element, AnnotatedGraphVertex):
                 agent_command = self.vertices_rules[graph_element.id]
-            elif graph_element.__class__.__name__ == AnnotatedGraphEdge.__name__:
+            elif isinstance(graph_element, AnnotatedGraphEdge):
                 agent_command = self.edges_rules[graph_element.id]
             else:
                 return
